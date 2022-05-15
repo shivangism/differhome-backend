@@ -6,8 +6,7 @@ var jwt = require('jsonwebtoken');
 
 var authJwt = (req,res,next)=>{
     if(!req.headers.authorization){
-        onsole.log(err);
-            res.status(403).json({
+            res.status(401).json({
                 error:'not logged in'
             });
     }
@@ -17,13 +16,14 @@ var authJwt = (req,res,next)=>{
     jwt.verify(token,privateKey,function(err,decoded){
         if(err){
             console.log(err);
-            res.status(403).json({
+            res.status(401).json({
                 error:'invalid token'
             });
         }
         else{
-            console.log(decoded);
+            console.log( decoded );
             req.details = decoded;
+
         }
     })
     next();

@@ -21,6 +21,8 @@ module.exports = (sequelize, DataTypes) => {
     balcony: DataTypes.BOOLEAN,
     security: DataTypes.BOOLEAN,
     about: DataTypes.STRING,
+    xc: DataTypes.INTEGER,
+    yc: DataTypes.INTEGER,
     projectID: DataTypes.INTEGER
   }, {
     sequelize,

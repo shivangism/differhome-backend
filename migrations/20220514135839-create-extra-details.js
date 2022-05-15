@@ -29,6 +29,12 @@ module.exports = {
       about: {
         type: Sequelize.STRING
       },
+      xc: {
+        type: Sequelize.INTEGER
+      },
+      yc: {
+        type: Sequelize.INTEGER
+      },
       projectID: {
         type: Sequelize.INTEGER
       },
