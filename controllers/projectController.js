@@ -65,7 +65,7 @@ var filter2 = async (req, res) => {
                 area: { [Op.between]: [req.body.areaMin, req.body.areaMax] },
                 budget: { [Op.between]: [req.body.budgetMin, req.body.budgetMax] },
                 bhk: req.body.bhk,
-                age: age,
+                age: {[Op.lt]: age},
                 status:req.body.status,
                 furnished:req.body.furnished
             }
